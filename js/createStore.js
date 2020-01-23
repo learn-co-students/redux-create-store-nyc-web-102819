@@ -36,6 +36,8 @@ function render() {
   container.textContent = store.getState().count;
 };
 
+//reateStore takes the reducer as the argument. This sets the new store's reducer as reducer. 
+//When an action is dispatched, it calls the reducer that we passed through when creating the store.
 let store = createStore(reducer);
 store.dispatch({ type: '@@INIT'})
 
